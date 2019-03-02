@@ -6,9 +6,12 @@ var MessagesView = {
     MessagesView.$chats.on('submit', MessagesView.render);
   },
   
-  render: function(message) {
-    this.$chats.append('<div><div class="username">' + message.username + '</div><div>' + message.text + '</div></div>');
-    console.log(message);
+  render: function(data) {
+    // console.log("data",data);
+    // for (var i = 0; i < data.results.length; i++) {
+    //   MessageView.render(data.results[i]);
+    // }
+    this.$chats.append(MessageView.render(data));
   },
 
 };
