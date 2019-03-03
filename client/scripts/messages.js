@@ -1,6 +1,5 @@
 var Messages = {
-  $messages: $('messages'),
-  username: 'shawndrost',
+  username: 'ThereLes',
   text: 'trololo',
-  roomname: '4chan'    
+  roomname: '4chan'  
 };

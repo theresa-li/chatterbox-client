@@ -4,11 +4,10 @@ var RoomsView = {
   $select: $('#rooms select'),
 
   initialize: function() {
-    this.$button.on('click', this.handleSubmit);
+    this.$button.on('click', this.render);
   },
 
-  render: function(message) {
-    this.$select.append('<div class="roomname">' + message.roomname + '</div>');
+  render: function() {
   }
 
 };

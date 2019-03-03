@@ -7,6 +7,7 @@ var FormView = {
   },
 
   handleSubmit: function(event) {
+
     // Stop the browser from submitting the form
     event.preventDefault();
 
@@ -15,9 +16,11 @@ var FormView = {
     var posted = function() {
       console.log('posted!');
     }
-
-    Parse.create(this.$form, Parse.readAll(posted));
+    Messages.text = event.target[0].value;
+    Messages.username = App.username;
+    Parse.create(Messages, Parse.readAll(posted)); // args: message, successCB
     console.log('click!');
+    App.initialize();
   },
 
   setStatus: function(active) {

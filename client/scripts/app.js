@@ -27,7 +27,7 @@ var App = {
         }
       }
       
-      // console.log("data",data);
+      
 
       callback();
     });
