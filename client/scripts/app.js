@@ -24,6 +24,10 @@ var App = {
       for(var i = 0; i < data.results.length; i++) {
         if (data.results[i].username && data.results[i].text){
           MessagesView.render(data.results[i]);
+          if (data.results[i].roomname && !Rooms.roomname[data.results[i].roomname]) {
+            Rooms.roomname[data.results[i].roomname] = data.results[i].roomname;
+            RoomsView.render(data.results[i].roomname);
+          }
         }
       }
       
